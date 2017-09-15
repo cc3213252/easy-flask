@@ -8,7 +8,7 @@ class BaseConfig(object):
     """
 
     """
-    APP_LISTEN_PORT = 7690
+    APP_LISTEN_PORT = 7691
     HEADER_CONTENT_TYPE = 'application/json'
     JSONIFY_PRETTYPRINT_REGULAR = None
 
