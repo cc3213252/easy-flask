@@ -16,6 +16,16 @@ class TestConfig(object):
 
 class CheckTestCase(ApiTestCase):
 
+    def test_only(self):
+        resp = self.fetch('/card/benefits', data=data, method='GET')
+        resp_obj = json.loads(resp.text)
+        print(json.dumps(resp_obj, ensure_ascii=False, indent=4))
+        if resp_obj['code'] == '4000102':
+            self.get_token()
+
+        assert resp.status_code == 200
+
+
     # 活动
     def test_acts_values(self):
         data = {

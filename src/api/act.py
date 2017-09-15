@@ -10,7 +10,8 @@ from src.utils import (
 from src.modules.act import (
     get_acts_values,
     get_acts_graphics,
-)
+}
+from src.utils.flk import make_response
 from src.modules.authority import access_required
 import logging
 logger = logging.getLogger(__name__)
@@ -23,6 +24,11 @@ class Acts(Resource):
         self.post_parser = reqparse.RequestParser()
         self.post_parser.add_argument(
             'act_ids', type=list, location='json', required=True)
+
+    # for test
+    def get(self):
+        return make_response(data = {'act_id': 1430, 'name': '买一送一'})
+
 
     @access_required
     def post(self):
