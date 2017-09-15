@@ -1,0 +1,10 @@
+{
+  "stop_service_cmd": "sh ./stop_service.sh",
+  "start_service_cmd": "supervisorctl -c ~/supervisor/supervisord.conf start easy-flask:",
+  "validate_service_cmd": "true",
+  "dev-hosts": ["yudan@118.89.200.60"],
+  "pro-hosts": ["bear@59.110.55.115"],
+  "app_name": "easy-flask",
+  "virtualenv": "~/venv/easy-flask",
+  "remote_dir": "~/project/easy-flask"
+}

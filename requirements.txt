@@ -1,0 +1,14 @@
+Fabric==1.11.1
+Flask==0.11
+Flask-Cors==2.1.2
+Flask-RESTful==0.3.5
+Flask-Redis==0.3.0
+gevent==1.1.1
+greenlet==0.4.10
+gunicorn==19.6.0
+Jinja2==2.8
+redis==2.10.5
+requests==2.10.0
+SQLAlchemy==1.0.14
+psycopg2==2.7.3
+
