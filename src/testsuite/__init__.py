@@ -23,7 +23,7 @@ class ApiTestCase(unittest.TestCase):
         self.data = None
         self.uri = ''
         self.host = 'http://127.0.0.1:7690'
-        self.mode = 'testing'
+        self.mode = 'local'
         if self.mode == 'prod':
             self.first_code = '43157800'
             self.card_id = '3239'
@@ -51,12 +51,13 @@ class ApiTestCase(unittest.TestCase):
         self.uri = uri
         if data:
             self.data = data
+            self.data['sign'] = self.sign()
         if host:
             self.host = host
         self.method = method.upper()
-        self.data['sign'] = self.sign()
+
         url = '{}{}'.format(self.host, uri)
-        if method.upper() == 'GET':
+        if method.upper() == 'GET' and data:
             url += '?' + '&'.join(['{}={}'.format(k, v, k, v) for k, v in data.items()])
         print(url)
         return requests.request(self.method, url,

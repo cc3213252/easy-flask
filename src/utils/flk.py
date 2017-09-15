@@ -45,7 +45,7 @@ def create_app():
 
 def make_response(sync_time=None, data=None, http_code=None):
     resp = {
-        'status': '200',
+        'code': '200',
         'msg': 'success',
         'data': data if data is not None else {}
     }

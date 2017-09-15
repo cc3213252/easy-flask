@@ -10,7 +10,7 @@ from src.utils import (
 from src.modules.act import (
     get_acts_values,
     get_acts_graphics,
-}
+)
 from src.utils.flk import make_response
 from src.modules.authority import access_required
 import logging

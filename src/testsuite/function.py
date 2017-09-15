@@ -1,12 +1,9 @@
 # coding=utf-8
-import datetime
-import json
 
-import requests
+import json
 import unittest
 from src.testsuite import ApiTestCase
-import time
-import base64
+
 
 class TestConfig(object):
     random_str = "c6b306cf"
@@ -17,7 +14,7 @@ class TestConfig(object):
 class CheckTestCase(ApiTestCase):
 
     def test_only(self):
-        resp = self.fetch('/card/benefits', data=data, method='GET')
+        resp = self.fetch('/acts', method='GET')
         resp_obj = json.loads(resp.text)
         print(json.dumps(resp_obj, ensure_ascii=False, indent=4))
         if resp_obj['code'] == '4000102':
