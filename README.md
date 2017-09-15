@@ -15,6 +15,19 @@
 - 目录功能划分清晰
 - 蓝图
 
-##### 安装
+#### 安装
 
 - [安装前提条件](doc/前提条件.md)
+- pip install -r requirement.txt
+
+#### 自动化部署
+
+```
+fab dev deploy
+```
+
+#### 访问
+
+```
+http://118.89.200.60/easy/acts
+```
