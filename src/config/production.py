@@ -31,7 +31,7 @@ class ProductionConfig(BaseConfig):
     # redis 配置
     REDIS_URL = "redis://:5fd1081cec114831:Buerjia5023@5fd1081cec114831.m.cnbja.kvstore.aliyuncs.com:6379/6"
 
-    RDS_KEY = 'garen:production'
+    RDS_KEY = 'easy:production'
 
     MONGO_URL = 'mongodb://pro:mydwtBxJ0F4=@dds-2ze976ed2b9e1d342.mongodb.rds.aliyuncs.com:3717,' \
                 'dds-2ze976ed2b9e1d341.mongodb.rds.aliyuncs.com:3717/tob_pro?replicaSet=mgset-1184787'

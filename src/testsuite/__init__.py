@@ -22,8 +22,8 @@ class ApiTestCase(unittest.TestCase):
         self.headers = {'Content-Type': 'application/json', }
         self.data = None
         self.uri = ''
-        self.host = 'http://127.0.0.1:7690'
-        self.mode = 'local'
+        self.host = 'http://127.0.0.1:7691'
+        self.mode = 'testing'
         if self.mode == 'prod':
             self.first_code = '43157800'
             self.card_id = '3239'
@@ -35,12 +35,12 @@ class ApiTestCase(unittest.TestCase):
     def args(self):
         if self.mode == 'testing':
             return 'ock3svreqelk3uqfu51a48fnsz8jlwv1', 'onqstlf2p8sglb8mnpbuu6cek5nrhhet', \
-                   'http://openapi-test.billbear.cn/asset'
+                   'http://118.89.200.60/easy'
         elif self.mode == 'prod':
             return 'ta3gzb9lovq424zrgzkl0o13jqc4f7yd', 'wud1sfd3mrdmygs1z5l8bk4glo9v9qlz', \
-                   'https://openapi.billbear.cn/asset'
+                   'https://118.89.200.60/easy'
         return 'ock3svreqelk3uqfu51a48fnsz8jlwv1', 'onqstlf2p8sglb8mnpbuu6cek5nrhhet', \
-               'http://127.0.0.1:7690'        #随手记公司
+               'http://127.0.0.1:7691'
 
     def fetch(self, uri, headers=None, data=None, method="GET", host=None, mode=''):
         if headers:

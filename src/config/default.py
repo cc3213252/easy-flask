@@ -23,9 +23,6 @@ class BaseConfig(object):
     # 默认一次返回的数据量
     COUNT = 100
 
-    # https 地址
-    IMAGE_HTTPS_HOST_NAME = 'qnpic.billbear.cn'
-
     # token 最大有效期
     TOKEN_MAX_EFFECTIVE_SEC = 86400
     # token每小时最大请求次数

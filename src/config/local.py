@@ -22,7 +22,7 @@ class LocalConfig(BaseConfig):
     MAX_RETRY_NUM = 3
 
     DATABASE_CONFIG = {
-        'database': 'bear_db',
+        'database': 'easy_db',
         'host': 'localhost',
         'port': 10001,
         'user': 'yudan',
@@ -32,7 +32,7 @@ class LocalConfig(BaseConfig):
     # redis 配置
     REDIS_URL = "redis://127.0.0.1:10002/0"
 
-    RDS_KEY = 'garen:local'
+    RDS_KEY = 'easy:local'
 
     MONGO_URL = 'mongodb://127.0.0.1:10003/tob_pro'
 
@@ -62,6 +62,6 @@ class LocalProductConfig(BaseConfig):
     # redis 配置
     REDIS_URL = "redis://127.0.0.1:10020/6"
 
-    RDS_KEY = 'garen:production'
+    RDS_KEY = 'easy:production'
 
     MONGO_URL = 'mongodb://127.0.0.1:10003/tob_pro'
